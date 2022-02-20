@@ -72,7 +72,7 @@ static const struct {
 	 *	  0: registers accessed from secure resource only.
 	 */
 #if (RCAR_RPC_HYPERFLASH_LOCKED == 1)
-	{ SEC_SEL13, 0xFFBFFFFFU },
+	{ SEC_SEL13, 0xFFFFFFFFU },
 #endif /* (RCAR_RPC_HYPERFLASH_LOCKED == 1) */
 	/*
 	 * Bit27: System Timer (SCMT) slave ports
@@ -197,8 +197,8 @@ static const struct {
 	 *	  SecurityGroup3
 	 */
 #if (RCAR_RPC_HYPERFLASH_LOCKED == 1)
-	    { SEC_GRP0COND13,     0x00400000U },
-	    { SEC_GRP1COND13,     0x00400000U },
+	    { SEC_GRP0COND13,     0x00000000U },
+	    { SEC_GRP1COND13,     0x00000000U },
 #endif /* (RCAR_RPC_HYPERFLASH_LOCKED == 1) */
 	/*
 	 * Security group 0 attribute setting for slave ports 14
