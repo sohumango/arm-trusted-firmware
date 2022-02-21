@@ -6,6 +6,9 @@
 
 include plat/renesas/common/common.mk
 
+LIFEC_DBSC_PROTECT_ENABLE := 0
+RCAR_BL33_EXECUTION_EL := 1
+
 ifndef LSI
   $(error "Error: Unknown LSI. Please use LSI=<LSI name> to specify the LSI")
 else

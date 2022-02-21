@@ -8,6 +8,8 @@ include plat/renesas/common/common.mk
 
 LIFEC_DBSC_PROTECT_ENABLE := 0
 
+RCAR_BL33_EXECUTION_EL := 1
+
 ENABLE_STACK_PROTECTOR	:= strong
 
 ifndef LSI
