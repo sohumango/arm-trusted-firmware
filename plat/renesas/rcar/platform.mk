@@ -6,6 +6,8 @@
 
 include plat/renesas/common/common.mk
 
+LIFEC_DBSC_PROTECT_ENABLE := 0
+
 ENABLE_STACK_PROTECTOR	:= strong
 
 ifndef LSI
@@ -188,7 +190,7 @@ $(eval $(call add_define,RCAR_LOSSY_ENABLE))
 
 # Process LIFEC_DBSC_PROTECT_ENABLE flag
 ifndef LIFEC_DBSC_PROTECT_ENABLE
-LIFEC_DBSC_PROTECT_ENABLE := 0
+LIFEC_DBSC_PROTECT_ENABLE := 1
 endif
 $(eval $(call add_define,LIFEC_DBSC_PROTECT_ENABLE))
 
