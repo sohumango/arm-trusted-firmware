@@ -799,6 +799,18 @@ void bl2_el3_early_platform_setup(u_register_t arg1, u_register_t arg2,
 		break;
 	}
 
+#if (RCAR_BL33_EXECUTION_EL == 1)
+    NOTICE("wang: RCAR_BL33_EXECUTION_EL == 1\n");
+#else
+    NOTICE("wang: RCAR_BL33_EXECUTION_EL != 0\n");
+#endif
+
+#if (LIFEC_DBSC_PROTECT_ENABLE == 0)
+    NOTICE("wang: LIFEC_DBSC_PROTECT_ENABLE == 0\n");
+#else
+    NOTICE("wang: LIFEC_DBSC_PROTECT_ENABLE != 0\n");
+#endif
+
 	NOTICE("BL2: R-Car Gen3 Initial Program Loader(%s) Rev.%s\n", str,
 	       version_of_renesas);
 
